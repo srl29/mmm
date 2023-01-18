@@ -10,8 +10,8 @@ font-size: 2em;
 .fa {
 position: relative;
 display: table-cell;
-width: 60px;
-height: 36px;
+width: 8.4vh;
+height: 4.2vh;
 text-align: center;
 vertical-align: middle;
 font-size: 1.25em;
@@ -71,12 +71,7 @@ vertical-align:middle;
 }
 
 
-/*
-.sideNav>ul.expand {
-position:absolute;
-bottom:0;
-}
-*/
+
 .no-touch .scrollable.hover {
 overflow-y:hidden;
 }
@@ -103,6 +98,7 @@ outline:0;
 margin:0;
 padding:0;
 }
+
 .sideNav li:hover button,
 nav.sideNav li.active>button,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover button,
@@ -158,13 +154,6 @@ height: 100%;
   color: rgb(255, 255, 255);
 }
 
-/*
-.video
-{
-    position: relative;
-}
-*/
-
 
 
 
@@ -193,6 +182,8 @@ height: 100%;
 ::-webkit-scrollbar-thumb:hover {
   background: #000000; 
 }
+
+
 
 /* embeded trailer css*/
 

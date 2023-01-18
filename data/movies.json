@@ -1,11 +1,11 @@
 [
     {
       "id": 1,
-      "image": "../images/movie10.webp",
-      "eps_num": "16",
-      "type": ["ГЭМТ ХЭРЭГ", "УЯНГА"],
-      "filtera": "Олон ангит",
-      "name": "Гал командын хажуу дахь цагдаагийн газар",
+      "image" : "/Users/acer/OneDrive/Desktop/web/mmm/img/poster1.webp",
+      "eps_num": "1",
+      "type": ["crime", "romance"],
+      "filtera": "Movie",
+      "name": "hello world",
       "year": "2022",
       "fav": "false",
       "about": 
@@ -14,10 +14,10 @@
     },
     {
       "id": 2,
-      "image": "../images/movie2.webp",
+      "image": "",
       "eps_num": "16",
       "type": ["АДАЛ ЯВДАЛ", "УЯНГА"],
-      "filtera": "Олон ангит",
+      "filtera": "Series",
       "name": "Сул дорой баатар",
       "year": "2010",
       "fav": "false",
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "image": "../images/movie3.webp",
+      "image": "",
       "eps_num": "16",
       "type": ["ГЭМТ ХЭРЭГ", "УЯНГА", "ГЭР БҮЛ"],
       "filtera": "Олон ангит",
@@ -38,7 +38,7 @@
     },
     {
       "id": 4,
-      "image": "../images/movie4.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["ИНЭЭДЭМ", "УЯНГА"],
       "filtera": "Олон ангит",
@@ -50,7 +50,7 @@
     },
     {
       "id": 5,
-      "image": "../images/movie5.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["ИНЭЭДЭМ", "ГЭР БҮЛ"],
       "filtera": "Олон ангит",
@@ -62,7 +62,7 @@
     },
     {
       "id": 6,
-      "image": "../images/movie6.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["ИНЭЭДЭМ", "РОМАНТИК"],
       "filtera": "Олон ангит",
@@ -74,7 +74,7 @@
     },
     {
       "id": 7,
-      "image": "../images/movie7.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Олон ангит",
@@ -86,7 +86,7 @@
     },
     {
       "id": 8,
-      "image": "../images/movie8.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Олон ангит",
@@ -98,7 +98,7 @@
     },
     {
       "id": 9,
-      "image": "../images/movie9.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Олон ангит",
@@ -109,7 +109,7 @@
     },
     {
       "id": 10,
-      "image": "../images/movie10.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Олон ангит",
@@ -120,7 +120,7 @@
     },
     {
       "id": 11,
-      "image": "../images/movie21.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УЯНГА", "ГЭР БҮЛ"],
       "filtera": "Олон ангит",
@@ -131,7 +131,7 @@
     },
     {
       "id": 12,
-      "image": "../images/movie22.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["ГЭМТ ХЭРЭГ", "УРАН ЗӨГНӨЛ"],
       "filtera": "Олон ангит",
@@ -142,7 +142,7 @@
    },
     {
       "id": 13,
-      "image": "../images/movie23.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УЯНГА"],
       "filtera": "Олон ангит",
@@ -153,7 +153,7 @@
    },
     {
       "id": 14,
-      "image": "../images/movie24.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Олон ангит",
@@ -164,7 +164,7 @@
    },
     {
       "id": 15,
-      "image": "../images/movie25.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["ГЭР БҮЛ", "ШИНЖЛЭХ УХААН", "УЯНГА"],
       "filtera": "Олон ангит",
@@ -175,7 +175,7 @@
    },
     {
       "id": 16,
-      "image": "../images/movie11.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Олон ангит",
@@ -186,7 +186,7 @@
    },
     {
       "id": 17,
-      "image": "../images/movie12.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Нэг ангит",
@@ -197,7 +197,7 @@
    },
     {
       "id": 18,
-      "image": "../images/movie13.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Нэг ангит",
@@ -208,7 +208,7 @@
    },
     {
       "id": 19,
-      "image": "../images/movie14.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Нэг ангит",
@@ -219,7 +219,7 @@
    },
     {
       "id": 20,
-      "image": "../images/movie15.webp",
+      "image": "  ",
       "eps_num": "16",
       "type": ["УРАН ЗӨГНӨЛ", "РОМАНТИК", "ӨСВӨР НАС"],
       "filtera": "Нэг ангит",

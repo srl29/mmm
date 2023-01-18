@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fMoveis</title>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="shortcut icon" href="/img/tabIcon.webp" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/home.js"></script>
+    // Do not include both lightslider.js and lightslider.min.js
+
+    <!--  fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f524e5ea44.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <!-- navigation heseg -->
+    <nav>
+        <a href="#" class="logo">
+            <img src="/img/logo.png" alt="Logo">
+        </a>
+
+        <ul class="menu">
+
+            <li><a href="#">Нүүр</a></li>
+            <li><a href="#">Бүрэн хэмжээний </a></li>
+            <li><a href="#">Олон ангит  </a></li>
+
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Find Your Movies">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-angle-down" ></i>
+        </div>
+    </nav>
+
+    <section id="main">
+        <h2 class="slider-heading">Шинэ гаргалт</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slider-container">
+                        <img src="/img/slider6.webp" alt="">
+                    </div>   
+
+                    <div class="slider-container">
+                        <img src="/img/slider5.webp" alt="">
+                    </div>
+                
+                
+                    <div class="slider-container">
+                        <img src="/img/slider4.webp" alt="">
+                    </div>
+        
+                
+                    <div class="slider-container">
+                        <img src="/img/slider3.webp" alt="">
+                    </div>
+
+                
+                    <div class="slider-container">
+                        <img src="/img/slider2.webp" alt="">
+                    </div>
+            
+                
+                    <div class="slider-container">
+                        <img src="/img/slider1.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            
+          
+
+        
+
+    </section>
+    <!-- slider js-->
+    <script>
+       $(document).ready(function() {
+    $('#auto-width').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#auto-width').removeClass('cS-hidden');
+        } 
+    });  
+  });
+      </script> 
+</body>
+</html>

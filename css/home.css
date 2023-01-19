@@ -16,18 +16,26 @@ ul{
 a{
     text-decoration: none;
 }
+.top{
+    background-color: rgb(247,247,247);
+    
+}
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     border: 1px solid rgba(236, 236, 236, 0.04);
-    background-color: rgb(247,247,247);
+
     position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
+    opacity: 1;
+ 
 }
+
+
 
 .logo img{
     height: 5vh;
@@ -93,21 +101,25 @@ nav .menu li a:hover{
 }
 
 #main{
-    padding-top: 80px;
+    padding-top: 5vh;
     color: #000000;
     height: 1px;
 }
 
-.slider-container{
-    width: 60.2vh;
-    height: 35vh;
-    box-shadow: 5px 15px 30px rgba(39, 38, 38, 0);
-    margin: 0px 20px 10px 20px;
-    overflow: hidden;
-    display: flex;
+.slider-item{
+    width: 10vh;
+    height: 3vh;
+  
+}
+/*
+.slider-item:hover{
+	transform: scale(1.05);
+
+
 }
 
-.slider-container img{
+.slider-item img{
+    padding-top: 1%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -123,10 +135,36 @@ nav .menu li a:hover{
     color: #1a1a1a;
 }
 
-.cS-hidden {
-    height: 1px;
-    opacity: 0;
-    filter: alpha(opacity=0);
+
+
+.slider{
+    width: 100%;
+    height: 36vh;
     overflow: hidden;
+    
 }
 
+.slides{
+    width: 600%;
+    height: 36vh;
+    
+}
+*/
+.top-content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.top-content-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

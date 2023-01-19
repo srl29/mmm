@@ -8,8 +8,7 @@
 
     <link rel="stylesheet" href="/css/home.css">
     <link rel="shortcut icon" href="/img/tabIcon.webp" type="image/x-icon">
-    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <script src="/js/home.js"></script>
     // Do not include both lightslider.js and lightslider.min.js
 
@@ -23,12 +22,13 @@
 </head>
 <body>
     <!-- navigation heseg -->
+    <div class="top">
     <nav>
         <a href="#" class="logo">
             <img src="/img/logo.png" alt="Logo">
         </a>
 
-        <ul class="menu">
+        <ul class="menu" id="navbar">
 
             <li><a href="#">Нүүр</a></li>
             <li><a href="#">Бүрэн хэмжээний </a></li>
@@ -45,57 +45,107 @@
             <i class="fa-solid fa-angle-down" ></i>
         </div>
     </nav>
-
-    <section id="main">
-        <h2 class="slider-heading">Шинэ гаргалт</h2>
+</div>
+    <section class="carousel" id="main">
+        <!--<h2 class="slider-heading">Шинэ </h2>-->
             <div class="slider">
-                <div class="slides">
-                    <div class="slider-container">
-                        <img src="/img/slider6.webp" alt="">
-                    </div>   
-
-                    <div class="slider-container">
-                        <img src="/img/slider5.webp" alt="">
+                <div class="slides"> 
+                    <div class="top-content">
+                        <img class="top-content-img" src="/img/slider6.webp" alt="" >
                     </div>
                 
-                
-                    <div class="slider-container">
-                        <img src="/img/slider4.webp" alt="">
-                    </div>
-        
-                
-                    <div class="slider-container">
-                        <img src="/img/slider3.webp" alt="">
-                    </div>
-
-                
-                    <div class="slider-container">
-                        <img src="/img/slider2.webp" alt="">
-                    </div>
-            
-                
-                    <div class="slider-container">
-                        <img src="/img/slider1.webp" alt="">
-                    </div>
                 </div>
+            </div> 
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
+                <img class="featured-title" src="img/f-t-1.png" alt="">
+                <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
+                    deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
+                    minima voluptatibus incidunt. Accusamus, provident.</p>
+                <button class="featured-button">WATCH</button>
             </div>
-            
-          
-
-        
-
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpeg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/2.jpeg" alt="">
+                            <span class="movie-list-item-title">Star Wars</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
+                            <span class="movie-list-item-title">Storm</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <span class="movie-list-item-title">1917</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
+                            <span class="movie-list-item-title">Avengers</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/6.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div> 
     </section>
+    
     <!-- slider js-->
-    <script>
-       $(document).ready(function() {
-    $('#auto-width').lightSlider({
-        autoWidth:true,
-        loop:true,
-        onSliderLoad: function() {
-            $('#auto-width').removeClass('cS-hidden');
-        } 
-    });  
-  });
-      </script> 
+    <script src="/js/home.js"></script> 
 </body>
 </html>
+
+<!--#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+ 
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }-->

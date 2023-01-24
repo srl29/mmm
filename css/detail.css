@@ -196,7 +196,7 @@ height: 100%;
   padding-bottom: 97vh;
   margin-right: 21.5%;
   overflow: hidden;
-  -webkit-overflow-scrolling: touch; /*<<--- THIS IS THE KEY*/ 
+  -webkit-overflow-scrolling: touch;
 }
 
 .myIframe iframe {
@@ -219,8 +219,7 @@ a{
  
 
 
-  display: flex;
-  justify-content: center
+  
 }
 
 .angiud:hover{
@@ -234,9 +233,8 @@ a{
   
 }
 ul li a{
-  padding-top: ;
   text-transform: lowercase;
- text-align: ;s
+
   color: #ffffff;
   
 }
@@ -246,7 +244,8 @@ ul li :hover{
   
 }
 
-ul li img{
- 
-
+ul li a img{
+  margin-left: -50px;
+  width: 80%;
+  height: 100%;
 }

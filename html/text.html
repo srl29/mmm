@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <meta name="description" content="as;fja;ouf iopweau fo">
+
+    <style>
+        @import "https://unpkg.com/open-props";
+
+        :root {
+	--ungu-undsen-har: #000;
+	--ungu-undsen-tsagaan: #fff;
+	--ungu-tuslah: #296BFF;
+
+	--hemjee-undsen: 0.05rem;
+	--huree-undsen: var(--hemjee-undsen) solid var(--ungu-tuslah);
+
+
+}
+* {
+	margin: 0;
+  }
+  
+  body {
+	font-family: 'Montserrat Alternates', sans-serif;
+  }
+  
+  .navbar {
+	width: 100%;
+	height: 50px;
+	background-color: var(--ungu-undsen-har);
+	position: sticky;
+	top: 0;
+
+  }
+
+  .navbar.active {
+	width: 100%;
+	height: 50px;
+	background-color: var(--ungu-undsen-tsagaan	);
+	position: sticky;
+	top: 0;
+
+  }
+  
+  .navbar-container {
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+	height: 100%;
+	color: var(--ungu-undsen-tsagaan);
+	font-family: "Sen", sans-serif;
+  }
+  
+  .logo-container {
+	flex: 1;
+  }
+  
+
+  .logo img{
+	width: 100%;
+	height: 80%;
+  }
+  
+  .menu-container {
+	flex: 6;
+  }
+  
+  .menu-list {
+	display: flex;
+	list-style: none;
+  }
+  
+  .menu-list-item {
+	margin-right: 30px;
+	text-decoration: none;
+	color: rgba(44, 175, 215, 0.8);
+  }
+  
+  .menu-list-item.active {
+	font-weight: 550;
+	color: var(--ungu-tuslah);
+  }
+  .profile-container {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+  }
+  
+  .profile-text-container {
+	margin: 0 20px;
+  }
+  
+  .profile-picture {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+  }
+  
+  .toggle {
+	width: 40px;
+	height: 20px;
+	background-color: var(--ungu-undsen-tsagaan);
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: relative;
+  }
+  
+  .toggle-icon {
+	color: goldenrod;
+  }
+  
+  .toggle-ball {
+	width: 18px;
+	height: 18px;
+	background-color: var(--ungu-undsen-har);
+	position: absolute;
+	right: 1px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 1s ease all;
+  }
+  
+
+  
+  
+  
+  .container {
+	background-color: #151515;
+	min-height: calc(100vh - 50px);
+	color: var(--ungu-undsen-tsagaan);
+  }
+  
+
+  
+  .featured-content {
+	height: 50vh;
+	right: 0;
+	
+  }
+  
+  .featured-title {
+	
+	padding:  1vh;
+
+  }
+  
+  .featured-desc {
+	width: 500px;
+	color: lightgray;
+	margin: 30px 0;
+  }
+  
+  .featured-button {
+	background-color: var(--ungu-tuslah);
+	color: var(--ungu-undsen-tsagaan);
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-weight: bold;
+  }
+  
+  .movie-list-container {
+	padding: 0 20px;
+  }
+  
+  .movie-list-wrapper {
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .movie-list {
+	display: flex;
+	align-items: center;
+	height: 300px;
+	transform: translateX(0);
+	transition: all 1s ease-in-out;
+  }
+  
+  .movie-list-item {
+	margin-right: 30px;
+	position: relative;
+  }
+  
+  .movie-list-item:hover .movie-list-item-img {
+	transform: scale(1.2);
+	margin: 0 30px;
+	opacity: 0.5;
+  }
+  
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+	opacity: 1;
+  }
+  
+  .movie-list-item-img {
+	transition: all 1s ease-in-out;
+	width: 270px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 20px;
+  }
+  
+  .movie-list-item-title {
+	padding: 0 10px;
+	font-size: 32px;
+	font-weight: bold;
+	position: absolute;
+	top: 10%;
+	left: 50px;
+	opacity: 0;
+	transition: 1s all ease-in-out;
+  }
+  
+  .movie-list-item-desc {
+	padding: 10px;
+	font-size: 14px;
+	position: absolute;
+	top: 30%;
+	left: 50px;
+	width: 230px;
+	height: 2vh;
+	opacity: 0;
+	transition: 1s all ease-in-out;
+
+  }
+  
+  .movie-list-item-button {
+	padding: 10px;
+	background-color: var(--ungu-tuslah);
+	color: var(--ungu-undsen-tsagaan);
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	bottom: 20px;
+	left: 50px;
+	opacity: 0;
+	transition: 1s all ease-in-out;
+  }
+  
+  .arrow {
+	font-size: 120px;
+	position: absolute;
+	top: 90px;
+	right: 0;
+	color: lightgray;
+	opacity: 0.5;
+	cursor: pointer;
+  }
+  
+  .container.active {
+	background-color: var(--ungu-undsen-tsagaan);
+  }
+  
+  .movie-list-title.active {
+	color: var(--ungu-undsen-har);
+  }
+  
+  .navbar-container.active {
+	background-color: var(--ungu-undsen-tsagaan);
+  
+	color: var(--ungu-undsen-har);
+  }
+  
+
+  
+
+  .search{
+
+    width: 35vh;
+    height: 5vh;
+    background-color: rgba(57, 57, 57, 0.8);
+    display: flex;
+    justify-content: center;
+    border-radius: 2vh;
+    padding: 0px 2vh;
+	margin-right: 8vh
+}
+
+.search input{
+	
+    width: 100%;
+    height: 5.5vh;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.search i{
+    padding: 4% 0vh ;
+
+
+    color: var(--ungu-undsen-tsagaan);
+}
+.search i.active{
+    padding: 4% 0vh ;
+
+
+    color: var(--ungu-undsen-har);
+}
+
+.log-out a i{
+	margin-right: -3vh;
+	padding-left: 3vh;
+    color: var(--ungu-undsen-tsagaan);
+
+}
+.log-out a i.active{
+    color: var(--ungu-undsen-har);
+
+}
+
+  
+  .toggle.active{
+	  background-color: var(--ungu-undsen-har);
+  }
+  
+  .toggle-ball.active{
+	  background-color: var(--ungu-undsen-tsagaan);
+	  transform: translateX(-20px);
+  }
+  
+  @media only screen and (max-width: 940px){
+	  .menu-container{
+		  display: none;
+	  }
+	  .movie-list-item-img {
+		transition: all 1s ease-in-out;
+		width: 150px;
+		height: 220px;
+		object-fit: cover;
+		border-radius: 20px;
+	  }
+	  .movie-list-item-title {
+		
+		font-size: 3vh;
+		font-weight: bold;
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		transition: 1s all ease-in-out;
+	  }
+	  .movie-list-item-desc {
+		
+		font-size: 2.5vh;
+		position: absolute;
+		top: 15%;
+		left: 5vh;
+		width: 150px;
+		height: 2vh;
+		opacity: 0;
+		transition: 1s all ease-in-out;
+	
+	  }
+  }
+
+
+
+        }
+    </style>
+    <script>
+        function ChangeUndsenUngu() {
+
+            const myStyle = getComputedStyle(document.body);
+            const unguUndsen = myStyle.getPropertyValue("--ungu-undsen");
+
+            document.body.style.setProperty("--ungu-undsen", "#0F0");
+
+        }
+
+        class MyArticle {
+            constructor(title, content, image) {
+                this.title = title;
+                this.content = content;
+            }
+
+            render() {
+                return `
+                <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('/img/poster1.webp');">
+
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Шинэ гаргалт</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="${this.image}" alt="">
+                            <span class="movie-list-item-title">${this.title}</span>
+                            <p class="movie-list-item-desc">${this.content}</p>
+                                <a href="/html/detail.html" aria-label="go to player"><button class="movie-list-item-button">Watch</button></a>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/poster1.webp" alt="">
+                            <span class="movie-list-item-title">Star Wars</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/poster12.webp" alt="">
+                            <span class="movie-list-item-title">Storm</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/poster13.webp" alt="">
+                            <span class="movie-list-item-title">1917</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/poster14.webp" alt="">
+                            <span class="movie-list-item-title">Avengers</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/poster15.webp" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/poster16.webp" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="">
+                <article>
+                    <h3 class="">${this.title}</h3>
+                    <p>${this.content}</p>
+                    <img class="movie-list-item-img" src="${this.image}" alt="">
+                    
+                </article>
+                </div>`;
+            }
+        }
+
+        function App(articles, targetElement) {
+
+            let retVal = "";
+
+             for (const key in articles) {
+                 if (Object.hasOwnProperty.call(articles, key)) {
+                     let articleObj = new MyArticle(
+                         articles[key].title,
+                         articles[key].content);
+
+                     retVal += articleObj.render();
+                 }
+             }
+
+            for (const article of articles) {
+                let articleObj = new MyArticle(article.title, article.content);
+                retVal += articleObj.render();
+            }
+
+             for (const article of articles) {
+
+                 const { title: ttl, content: cntn } = article;
+
+                 let articleObj = new MyArticle(ttl, cntn);
+                 retVal += articleObj.render();
+            }
+
+             articles.forEach(art => {
+                 let articleObj = new MyArticle(art.title, art.content);
+                 retVal += articleObj.render();
+             })
+            document.querySelector("#"+targetElement).insertAdjacentHTML("beforeend", retVal);
+            document.getElementById(targetElement).insertAdjacentHTML("beforeend", retVal);
+        }
+
+        const newsData = {
+            categories: ["Category1", "Category2", "Category3"],
+            articles: [
+                {
+                    "title": "Her",
+                    "image": "/img/poster2.webp",
+                    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+                {
+                    "title": "Article 2",
+                    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+                {
+                    "title": "Article 3",
+                    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                },
+            ]
+        }
+        window.onload = () => App(newsData.articles, "myTarget");
+
+        const comments = [
+            {
+                name: "BM",
+                ognoo: "2022.11.12",
+                img: "../img/poster1.webp",
+                comment: ""
+            },
+            {
+                name: "BM",
+                ognoo: "2022.11.12",
+                img: "https://img.com/10.png",
+                comment: "../img/poster1.webp"
+            },
+            {
+                name: "BM",
+                ognoo: "2022.11.12",
+                img: "https://img.com/2.png",
+                comment: "../img/poster1.webp"
+            },
+            {
+                name: "BM",
+                ognoo: "2022.11.12",
+                img: "https://img.com/3.png",
+                comment: "../img/poster1.webp"
+            },
+            {
+                name: "BM",
+                ognoo: "2022.11.12",
+                img: "../img/poster1.webp",
+                comment: "../img/poster4.webp"
+            }
+        ];
+
+        const article = {
+            title: "Garchig",
+            coverImg: "",
+            category: "",
+            ognoo: "2022.11.12",
+            read: 186575,
+            comcount: 4,
+            niitlelch: { name: "", img: "", lnk: "" },
+
+            shares: [
+                { name: "fbshares", shares: 10 },
+                { name: "twshares", shares: 5 },
+                { name: "inshares", shares: 1 }
+            ],
+            articleStart: "",
+            sections: [
+                { title: "1.asdfasd", p: "asdfasdf", img: "https://www.google.com" },
+                { title: "16.asdfasd", p: "asdfasdf", img: "https://www.google.com" }
+            ]
+
+
+        }
+    
+        const articleObj={
+            article:{},
+            comments: [
+                {
+                    name: "BM",
+                    ognoo: "2022.11.12",
+                    img: "../img/poster1.webp",
+                    comment: ""
+                },
+                {
+                    name: "BM",
+                    ognoo: "2022.11.12",
+                    img: "../img/poster1.webp",
+                    comment: ""
+                },
+                {
+                    name: "BM",
+                    ognoo: "2022.11.12",
+                    img: "../img/poster1.webp",
+                    comment: ""
+                },
+                {
+                    name: "BM",
+                    ognoo: "2022.11.12",
+                    img: "../img/poster1.webp",
+                    comment: ""
+                },
+                {
+                    name: "BM",
+                    ognoo: "2022.11.12",
+                    img: "../img/poster1.webp",
+                    comment: ""
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="logo">
+            </div>
+            <nav>
+                <div class="navbar">
+                    <div class="navbar-container">
+                        <div class="logo-container">
+                     <!--   <a href="#" class="logo" aria-label="logo">
+                            <img src="/img/logo.png" alt="Logo">
+                        </a>
+                         -->   
+                        </div>
+                        <div class="menu-container">
+                            <ul class="menu-list">
+                                <li ><a class="menu-list-item active" href="#" aria-label="dsadsadsa">Эхлэл</a></li>
+                                <li ><a class="menu-list-item" href="#" aria-label="dsadsa">Бүрэн</a></li>
+                                <li ><a class="menu-list-item" href="#" aria-label="dsadsa">Олон ангит</a></li> 
+                            </ul>
+                        </div>
+                        <div class="profile-container">
+                            <div class="search">
+                            <input type="text" placeholder="Find Your Movies">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+        
+        
+                            <div class="toggle">
+                                <i class="fas fa-moon toggle-icon"></i>
+                                <i class="fas fa-sun toggle-icon"></i>
+                                <div class="toggle-ball"></div>
+                            </div>
+        
+                            <div class="log-out">
+                            <a href="login.html" aria-label="go to login"><i class="fa-solid fa-right-from-bracket"></i></a>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="myTarget">
+
+            </section>
+            <section>
+                <h2 id="">News group2</h2>
+                <article>
+                </article>
+                <article>
+
+                </article>
+                <article>
+                   
+                </article>
+                <article>
+
+                </article>
+            </section>
+        </main>
+        <footer>
+            <address>
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+                <a href="mailto:admin@gmail.com">admin@gmail.com</a><a href="tel:99887766">Call me</a>
+            </address>
+            <button onClick="ChangeUndsenUngu();">CLick me</button>
+            <div class="map"></div>
+        </footer>
+    </div>
+</body>
+
+</html>

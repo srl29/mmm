@@ -1,58 +1,35 @@
-"use strict";
+const arrows = document.querySelectorAll(".arrow");
+const movieLists = document.querySelectorAll(".movie-list");
 
-function carousel() {
-  let carouselSlider = document.querySelector(".carousel__slider");
-  let list = document.querySelector(".carousel__list");
-  let item = document.querySelectorAll(".carousel__item");
-  let list2;
-
-  const speed = 1;
-
-  const width = list.offsetWidth;
-  let x = 0;
-  let x2 = width;
-
-  function clone() {
-    list2 = list.cloneNode(true);
-    carouselSlider.appendChild(list2);
-    list2.style.left = `${width}px`;
-  }
-
-  function moveFirst() {
-    x -= speed;
-
-    if (width >= Math.abs(x)) {
-      list.style.left = `${x}px`;
+arrows.forEach((arrow, i) => {
+  const itemNumber = movieLists[i].querySelectorAll("img").length;
+  let clickCounter = 0;
+  arrow.addEventListener("click", () => {
+    const ratio = Math.floor(window.innerWidth / 270);
+    clickCounter++;
+    if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
+      movieLists[i].style.transform = `translateX(${
+        movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
+      }px)`;
     } else {
-      x = width;
+      movieLists[i].style.transform = "translateX(0)";
+      clickCounter = 0;
     }
-  }
+  });
 
-  function moveSecond() {
-    x2 -= speed;
+  console.log(Math.floor(window.innerWidth / 270));
+});
 
-    if (list2.offsetWidth >= Math.abs(x2)) {
-      list2.style.left = `${x2}px`;
-    } else {
-      x2 = width;
-    }
-  }
+//TOGGLE
 
-  function hover() {
-    clearInterval(a);
-    clearInterval(b);
-  }
+const ball = document.querySelector(".toggle-ball");
+const items = document.querySelectorAll(
+  ".container,.movie-list-title,.navbar-container,.sidebar,.left-menu-icon,.toggle"
+);
 
-  function unhover() {
-    a = setInterval(moveFirst, 0.5);
-    b = setInterval(moveSecond, 0.5);
-  }
-
-  clone();
-
-  let a = setInterval(moveFirst, 10);
-  let b = setInterval(moveSecond, 10);
-
-  }
-
-carousel();
+ball.addEventListener("click", () => {
+  items.forEach((item) => {
+    item.classList.toggle("active");
+  });
+  ball.classList.toggle("active");
+});

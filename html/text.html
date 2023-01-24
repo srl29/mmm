@@ -368,7 +368,7 @@
 
 
 
-        }
+        
     </style>
     <script>
         function ChangeUndsenUngu() {
@@ -381,9 +381,10 @@
         }
 
         class MyArticle {
-            constructor(title, content, image) {
+            constructor(title, content, img) {
                 this.title = title;
                 this.content = content;
+                this.content = img;
             }
 
             render() {
@@ -391,7 +392,7 @@
                 <div class="container">
         <div class="content-container">
             <div class="featured-content"
-                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('/img/poster1.webp');">
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('${this.image}');">
 
             </div>
             <div class="movie-list-container">
@@ -399,7 +400,7 @@
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="${this.image}" alt="">
+                            <img class="movie-list-item-img" src="${this.image}" alt="${this.image}">
                             <span class="movie-list-item-title">${this.title}</span>
                             <p class="movie-list-item-desc">${this.content}</p>
                                 <a href="/html/detail.html" aria-label="go to player"><button class="movie-list-item-button">Watch</button></a>
@@ -452,15 +453,7 @@
                 </div>
             </div>
         </div>
-    </div>
-                <div class="">
-                <article>
-                    <h3 class="">${this.title}</h3>
-                    <p>${this.content}</p>
-                    <img class="movie-list-item-img" src="${this.image}" alt="">
-                    
-                </article>
-                </div>`;
+    </div>`;
             }
         }
 
@@ -504,7 +497,7 @@
             articles: [
                 {
                     "title": "Her",
-                    "image": "/img/poster2.webp",
+                    "img": "../img/poster1.webp",
                     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 },
                 {
@@ -519,97 +512,8 @@
         }
         window.onload = () => App(newsData.articles, "myTarget");
 
-        const comments = [
-            {
-                name: "BM",
-                ognoo: "2022.11.12",
-                img: "../img/poster1.webp",
-                comment: ""
-            },
-            {
-                name: "BM",
-                ognoo: "2022.11.12",
-                img: "https://img.com/10.png",
-                comment: "../img/poster1.webp"
-            },
-            {
-                name: "BM",
-                ognoo: "2022.11.12",
-                img: "https://img.com/2.png",
-                comment: "../img/poster1.webp"
-            },
-            {
-                name: "BM",
-                ognoo: "2022.11.12",
-                img: "https://img.com/3.png",
-                comment: "../img/poster1.webp"
-            },
-            {
-                name: "BM",
-                ognoo: "2022.11.12",
-                img: "../img/poster1.webp",
-                comment: "../img/poster4.webp"
-            }
-        ];
 
-        const article = {
-            title: "Garchig",
-            coverImg: "",
-            category: "",
-            ognoo: "2022.11.12",
-            read: 186575,
-            comcount: 4,
-            niitlelch: { name: "", img: "", lnk: "" },
-
-            shares: [
-                { name: "fbshares", shares: 10 },
-                { name: "twshares", shares: 5 },
-                { name: "inshares", shares: 1 }
-            ],
-            articleStart: "",
-            sections: [
-                { title: "1.asdfasd", p: "asdfasdf", img: "https://www.google.com" },
-                { title: "16.asdfasd", p: "asdfasdf", img: "https://www.google.com" }
-            ]
-
-
-        }
-    
-        const articleObj={
-            article:{},
-            comments: [
-                {
-                    name: "BM",
-                    ognoo: "2022.11.12",
-                    img: "../img/poster1.webp",
-                    comment: ""
-                },
-                {
-                    name: "BM",
-                    ognoo: "2022.11.12",
-                    img: "../img/poster1.webp",
-                    comment: ""
-                },
-                {
-                    name: "BM",
-                    ognoo: "2022.11.12",
-                    img: "../img/poster1.webp",
-                    comment: ""
-                },
-                {
-                    name: "BM",
-                    ognoo: "2022.11.12",
-                    img: "../img/poster1.webp",
-                    comment: ""
-                },
-                {
-                    name: "BM",
-                    ognoo: "2022.11.12",
-                    img: "../img/poster1.webp",
-                    comment: ""
-                }
-            ]
-        }
+        
     </script>
 </head>
 
@@ -657,23 +561,9 @@
             </nav>
         </header>
         <main>
-            <section id="myTarget">
-
-            </section>
-            <section>
-                <h2 id="">News group2</h2>
-                <article>
-                </article>
-                <article>
-
-                </article>
-                <article>
-                   
-                </article>
-                <article>
-
-                </article>
-            </section>
+            <div>
+                <div id="myTarget"></div>
+            </div>
         </main>
         <footer>
             <address>
